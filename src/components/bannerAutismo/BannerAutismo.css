@@ -1,0 +1,84 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Altura del banner */
+  overflow: hidden;
+  background-color: #f0f0f0; /* Color de fondo neutro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Formas animadas */
+.circle,
+.square,
+.rectangle {
+  position: relative;
+  opacity: 0.8;
+  animation: moveShapes 10s infinite ease-in-out;
+}
+
+/* Círculos con colores representativos del autismo */
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #0ab1c4;
+  animation-duration: 8s;
+}
+
+.circle:nth-child(2) {
+  background-color: #fece06;
+  animation-duration: 6s;
+}
+
+.circle:nth-child(3) {
+  background-color: #ed3181;
+  animation-duration: 9s;
+}
+
+/* Cuadrados */
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #85c34c;
+  animation-duration: 7s;
+}
+
+.square:nth-child(5) {
+  background-color: #f24e42;
+  animation-duration: 10s;
+}
+
+/* Rectángulos */
+.rectangle {
+  width: 160px;
+  height: 50px;
+  background-color: #fece06;
+  animation-duration: 12s;
+}
+
+.rectangle:nth-child(6) {
+  background-color: #ed3181;
+  animation-duration: 9s;
+}
+
+/* Animación de las formas */
+@keyframes moveShapes {
+  0% {
+    transform: translateX(0px) translateY(200px) rotate(20deg);
+  }
+  25% {
+    transform: translateX(300px) translateY(100px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(0px) translateY(200px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(-200px) translateY(-100px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(300px) translateY(0px) rotate(-360deg);
+  }
+}
