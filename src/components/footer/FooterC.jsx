@@ -13,9 +13,9 @@ const FooterC = () => {
       style={{ height: "250px", padding: "20px 0" }}
     >
       {/* Logo */}
-      <div className="container h-100">
-        <div className="row h-100">
-          <div className="col-md-2">
+      <div className="container-fluid w-100 px-5 h-100">
+        <div className="row">
+          <div className="col-lg-2 d-flex align-items-center">
             <ul className="list-unstyled">
               <li>
                 <a href="./index.html">
@@ -33,7 +33,7 @@ const FooterC = () => {
           </div>
 
           {/* Nosotros y Legales */}
-          <div className="col-md-3">
+          <div className="col-lg-2">
             <h5>Sobre Nosotros</h5>
             <ul className="list-unstyled">
               <li>
@@ -68,7 +68,7 @@ const FooterC = () => {
           </div>
 
           {/* Redes sociales */}
-          <div className="col-md-3 text-center mb-3 mb-md-0">
+          <div className="col-lg-2 text-center mb-3 mb-md-0">
             <h5>Redes Sociales</h5>
             <a
               href="https://www.instagram.com/centro.terapeutico.creciendo/"
@@ -105,7 +105,7 @@ const FooterC = () => {
           </div>
 
           {/* Formulario de contacto */}
-          <div className="col-md-4">
+          <div className="col-lg-3">
             <h5>Contáctanos</h5>
             <form
               onSubmit={(e) => {
@@ -135,25 +135,23 @@ const FooterC = () => {
               </button>
             </form>
           </div>
-        </div>
-      </div>
-      <div className="col-md-2"></div>
-      <h5>Donde Estamos</h5>
+        
+      
+      <div className="col-lg-3 text-end">
+      <h5 className="text-center">Donde Estamos</h5>
       <iframe
         title="Google Maps"
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d113971.8787363437!2d-65.31843!3d-26.7883418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c07f2b1d355%3A0x277edb6b67378768!2sMariano%20Moreno%20723%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1745673496807!5m2!1ses-419!2sa"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
+        
+        
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        width="30%"
-        height="400"
+        
+        width="300px"
+        height="160px"
         style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-      ></iframe>
+       
+        
+      ></iframe></div></div></div>
     </footer>
   );
 };
