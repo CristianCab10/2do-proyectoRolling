@@ -1,24 +1,27 @@
-import NavbarC from "./components/navbar/NavbarC";
-import CarouselC from "./components/carousel/CarouselC";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
 import FooterC from "./components/footer/FooterC";
-import AcordeonC from "./components/acordeon/AcordeonC";
-import ParallaxBackground from "./components/parallax/ParallaxBackground";
-import BannerAutismoC from "./components/bannerAutismo/BannerAutismoC";
+import LoginPage from "./pages/LoginPage";
+import RegisterPacient from "./pages/RegisterPacient";
+import RegisterDoctorPage from "./pages/RegisterDoctorPage";
+import RegisterAdminPage from "./pages/RegisterAdminPage";
 
 const App = () => {
-  //js
-  let nombre = "Daniel";
-
   return (
-    /*html* React exige un contenedoer pero div da conflicto por ese se crea la etiqueta vacia llamada fragment (componente de etiqueta vacia*/
     <>
-      <NavbarC />
-      <ParallaxBackground />
-      <BannerAutismoC />
-      <AcordeonC />
-      <CarouselC />
-
-      <FooterC />
+    <Router>
+      <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/aboutus" element={<aboutUsPage/>}/>
+      <Route path="/contact" element={<ContactPage/>}/>
+      <Route path="/login" element={<LoginPage/>}/>
+      <Route path="/registerPacient" element={<RegisterPacient/>}/>
+      <Route path="/registerDoctor" element={<RegisterDoctorPage/>}/>
+      <Route path="/registerAdmin" element={<RegisterAdminPage/>}/>
+      </Routes>
+      <FooterC/>
+    </Router>
     </>
   );
 };
