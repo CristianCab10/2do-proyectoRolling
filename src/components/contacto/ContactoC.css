@@ -1,0 +1,100 @@
+.titulos {
+  font-size: 24px;
+  text-align: start;
+}
+
+.textos-contacto {
+  font-size: 15px;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: justify;
+  background-color: #ffffff;
+}
+
+.contacto-container > form,
+.contacto-container > div {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form h2,
+.contacto-container > div h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: normal;
+  color: #444;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3085d6;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #85c34c;
+  color: #212529;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #fece06;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Datos de contacto */
+.contacto-container > div p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* Mapa responsivo */
+iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./BannerAutismo.css"; // Archivo CSS para estilos y animaciones
+import "./BannerAutismo.css"; 
 
 const BannerAutismoC = () => {
   return (
