@@ -5,9 +5,11 @@ import NavbarC from "../components/navbar/NavbarC"
 import ParallaxBackground from "../components/parallax/ParallaxBackground"
 
 
+
 const HomePage = () => {
   return (
     <>
+
     <NavbarC/>
     <ParallaxBackground/>
     <BannerAutismoC/>
@@ -18,3 +20,4 @@ const HomePage = () => {
 }
 
 export default HomePage
+

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import FooterC from "./components/footer/FooterC";
@@ -17,6 +17,7 @@ import DoctorPage from "./pages/DoctorPage";
 import ListaDePacientes from "./pages/ListaDePacientes";
 
 const App = () => {
+
   return (
     <>
     <Router>
