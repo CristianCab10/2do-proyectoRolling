@@ -96,7 +96,7 @@ const FormPacient = () => {
         });
 
         setTimeout(() => {
-          navigate("/");
+          navigate("/loginPacient");
         }, 1500);
       } else {
         Swal.fire({
@@ -116,7 +116,7 @@ const FormPacient = () => {
           className={errores.nombreApellido ? "form-control is-invalid" : "form-control"}
           value={formPacient.nombreApellido}
           name="nombreApellido"
-          onChange={handleChangeFormPacient}
+          onChange={handleChangeFormPacient} maxLength={18}
         />
         {errores.nombreApellido && (
           <p className="text-danger">{errores.nombreApellido}</p>
@@ -130,7 +130,7 @@ const FormPacient = () => {
           className={errores.email ? "form-control is-invalid" : "form-control"}
           value={formPacient.email}
           name="email"
-          onChange={handleChangeFormPacient}
+          onChange={handleChangeFormPacient} maxLength={26}
         />
         {errores.email && (
           <p className="text-danger">{errores.email}</p>
@@ -144,7 +144,7 @@ const FormPacient = () => {
           className={errores.contrasenia ? "form-control is-invalid" : "form-control"}
           value={formPacient.contrasenia}
           name="contrasenia"
-          onChange={handleChangeFormPacient}
+          onChange={handleChangeFormPacient} maxLength={10}
         />
         {errores.contrasenia && (
           <p className="text-danger">{errores.contrasenia}</p>
@@ -158,7 +158,7 @@ const FormPacient = () => {
           className={errores.repContrasenia ? "form-control is-invalid" : "form-control"}
           value={formPacient.repContrasenia}
           name="repContrasenia"
-          onChange={handleChangeFormPacient}
+          onChange={handleChangeFormPacient} maxLength={10}
         />
         {errores.repContrasenia && (
           <p className="text-danger">{errores.repContrasenia}</p>

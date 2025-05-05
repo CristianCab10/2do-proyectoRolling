@@ -94,7 +94,7 @@ const FormDoctor = () => {
         });
 
         setTimeout(() => {
-          navigate("/");
+          navigate("/loginDoctor");
         }, 1500);
       } else {
         Swal.fire({
@@ -114,7 +114,7 @@ const FormDoctor = () => {
           className={errores.nombreApellido ? "form-control is-invalid" : "form-control"}
           value={formDoctor.nombreApellido}
           name="nombreApellido"
-          onChange={handleChangeFormDoctor}
+          onChange={handleChangeFormDoctor} maxLength={18}
         />
         {errores.nombreApellido && (
           <p className="text-danger">{errores.nombreApellido}</p>
@@ -128,7 +128,7 @@ const FormDoctor = () => {
           className={errores.email ? "form-control is-invalid" : "form-control"}
           value={formDoctor.email}
           name="email"
-          onChange={handleChangeFormDoctor}
+          onChange={handleChangeFormDoctor} maxLength={26}
         />
         {errores.email && (
           <p className="text-danger">{errores.email}</p>
@@ -142,7 +142,7 @@ const FormDoctor = () => {
           className={errores.contrasenia ? "form-control is-invalid" : "form-control"}
           value={formDoctor.contrasenia}
           name="contrasenia"
-          onChange={handleChangeFormDoctor}
+          onChange={handleChangeFormDoctor} maxLength={10}
         />
         {errores.contrasenia && (
           <p className="text-danger">{errores.contrasenia}</p>
@@ -156,7 +156,7 @@ const FormDoctor = () => {
           className={errores.repContrasenia ? "form-control is-invalid" : "form-control"}
           value={formDoctor.repContrasenia}
           name="repContrasenia"
-          onChange={handleChangeFormDoctor}
+          onChange={handleChangeFormDoctor} maxLength={10}
         />
         {errores.repContrasenia && (
           <p className="text-danger">{errores.repContrasenia}</p>

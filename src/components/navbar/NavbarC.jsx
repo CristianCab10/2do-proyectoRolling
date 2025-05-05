@@ -35,9 +35,11 @@ const NavbarC = () => {
 
             </Nav>
             <Nav className="ms-auto">
-              <NavLink className={"nav-link"} to={"/login"}>
-                Login
-              </NavLink>
+            <NavDropdown title="Iniciar Sesion" id="basic-nav-dropdown">
+                <NavDropdown.Item as={NavLink} to="/loginPacient">Paciente</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/loginDoctor">Doctor</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/loginAdmin">Admin</NavDropdown.Item>
+              </NavDropdown>
               <NavDropdown title="Registrarse" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to="/registerPacient">
                   Paciente
