@@ -1,8 +1,10 @@
-import React from 'react'
+import NavbarC from '../components/navbar/NavbarC'
 
 const LoginPage = () => {
   return (
-    <div>LoginPage</div>
+    <>
+    <NavbarC/>
+    </>
   )
 }
 

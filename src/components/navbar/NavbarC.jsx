@@ -1,23 +1,8 @@
-//import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Dropdown from "react-bootstrap/Dropdown";
-
-function dropdownLogin() {
-  return (
-    <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Iniciar Sesión
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Usuarios</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Prestadores</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-  );
-}
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavLink} from "react-router";
 
 const NavbarC = () => {
   return (
@@ -38,13 +23,19 @@ const NavbarC = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/Inicio">Inicio</Nav.Link>
-              <Nav.Link href="/Nosotros">Sobre nosotros</Nav.Link>
-              <Nav.Link href="/contacto">Contacto</Nav.Link>
+
+              <NavLink className={"nav-link"} to={"/"}>Inicio</NavLink>
+              <NavLink className={"nav-link"} to={"/aboutUs"}>Sobre nosotros</NavLink>
+              <NavLink className={"nav-link"} to={"/contact"}>Contacto</NavLink>
             </Nav>
             <Nav className="ms-auto">
-              <Nav.Link href="/RegistroPage">Registrarse</Nav.Link>
-              {dropdownLogin()}
+              <NavLink className={"nav-link"} to={"/login"}>Login</NavLink>
+              <NavDropdown title="Registrarse" id="basic-nav-dropdown">
+                <NavDropdown.Item as={NavLink} to="/registerPacient">Paciente</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/registerDoctor">Doctor</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/registerAdmin">Admin</NavDropdown.Item>
+              </NavDropdown>
+
             </Nav>
           </Navbar.Collapse>
         </Container>
