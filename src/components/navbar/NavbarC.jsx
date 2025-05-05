@@ -24,7 +24,7 @@ const NavbarC = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="./index.html">
+          <Navbar.Brand href="/">
             <img
               src="./images/IsologoCreciendoColor.png"
               alt="Logo"
@@ -32,18 +32,18 @@ const NavbarC = () => {
                 width: "300px",
                 height: "auto",
                 marginInlineStart: "0px",
-              }}
+              }}  
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home">Inicio</Nav.Link>
-              <Nav.Link href="#link">Sobre nosotros</Nav.Link>
-              <Nav.Link href="#link">Contacto</Nav.Link>
+              <Nav.Link href="/Inicio">Inicio</Nav.Link>
+              <Nav.Link href="/Nosotros">Sobre nosotros</Nav.Link>
+              <Nav.Link href="/contacto">Contacto</Nav.Link>
             </Nav>
             <Nav className="ms-auto">
-              <Nav.Link href="#link">Registrarse</Nav.Link>
+              <Nav.Link href="/RegistroPage">Registrarse</Nav.Link>
               {dropdownLogin()}
             </Nav>
           </Navbar.Collapse>
