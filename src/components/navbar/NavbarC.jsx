@@ -9,7 +9,7 @@ const NavbarC = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="./index.html">
+          <Navbar.Brand href="/">
             <img
               src="./images/IsologoCreciendoColor.png"
               alt="Logo"
@@ -17,7 +17,7 @@ const NavbarC = () => {
                 width: "300px",
                 height: "auto",
                 marginInlineStart: "0px",
-              }}
+              }}  
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -32,6 +32,7 @@ const NavbarC = () => {
               <NavLink className={"nav-link"} to={"/contact"}>
                 Contacto
               </NavLink>
+
             </Nav>
             <Nav className="ms-auto">
               <NavLink className={"nav-link"} to={"/login"}>
@@ -48,6 +49,7 @@ const NavbarC = () => {
                   Admin
                 </NavDropdown.Item>
               </NavDropdown>
+
             </Nav>
           </Navbar.Collapse>
         </Container>

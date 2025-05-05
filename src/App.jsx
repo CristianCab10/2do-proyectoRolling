@@ -8,8 +8,10 @@ import RegisterDoctorPage from "./pages/RegisterDoctorPage";
 import RegisterAdminPage from "./pages/RegisterAdminPage";
 
 const App = () => {
+
   return (
     <>
+
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -22,6 +24,7 @@ const App = () => {
         </Routes>
         <FooterC />
       </Router>
+
     </>
   );
 };
