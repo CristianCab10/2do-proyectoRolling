@@ -17,7 +17,7 @@ const NavbarC = () => {
                 width: "300px",
                 height: "auto",
                 marginInlineStart: "0px",
-              }}  
+              }}
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,19 +26,24 @@ const NavbarC = () => {
               <NavLink className={"nav-link"} to={"/"}>
                 Inicio
               </NavLink>
-              <NavLink className={"nav-link"} to={"/aboutUs"}>
+              <NavLink className={"nav-link"} to={"/NosotrosC"}>
                 Sobre nosotros
               </NavLink>
               <NavLink className={"nav-link"} to={"/contact"}>
                 Contacto
               </NavLink>
-
             </Nav>
             <Nav className="ms-auto">
-            <NavDropdown title="Iniciar Sesion" id="basic-nav-dropdown">
-                <NavDropdown.Item as={NavLink} to="/loginPacient">Usuario</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/loginDoctor">Prestador</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/loginAdmin">Admin</NavDropdown.Item>
+              <NavDropdown title="Iniciar Sesion" id="basic-nav-dropdown">
+                <NavDropdown.Item as={NavLink} to="/loginPacient">
+                  Paciente
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/loginDoctor">
+                  Doctor
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/loginAdmin">
+                  Admin
+                </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Registrarse" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to="/registerPacient">
@@ -51,7 +56,6 @@ const NavbarC = () => {
                   Admin
                 </NavDropdown.Item>
               </NavDropdown>
-
             </Nav>
           </Navbar.Collapse>
         </Container>

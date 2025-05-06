@@ -70,7 +70,7 @@ const FooterC = () => {
             <ul className="list-unstyled">
               <li>
                 <a
-                  href="#quienes-somos"
+                  href="/NosotrosC"
                   className="text-white text-decoration-none"
                 >
                   ¿Quiénes somos?

@@ -8,7 +8,7 @@ function AcordeonC() {
           <div className="text-success">NUESTRA MISION</div>
         </Accordion.Header>
         <Accordion.Body>
-          Somo un Centro Terapéutico para niños, espacio interdisciplinario
+          Somos un Centro Terapéutico para niños, espacio interdisciplinario
           diseñado para brindar atención integral a menores con diversas
           necesidades de desarrollo y aprendizaje. Este tipo de centro combina
           varios enfoques terapéuticos para abordar de manera holística las
