@@ -21,48 +21,53 @@ import AdminCreateEditDoctorPage from "./pages/AdminCreateEditDoctorPage";
 import SobreNosotros from "./pages/SobreNosotrosPage";
 import ContactPage from "./pages/ContactPage";
 import TerminosCondicionesPage from "./pages/TerminosCondicionesPage";
-import Turnos from "./pages/Turnos";
-import AyudaPacient from "./pages/ayudaPacient";
-
-import TurnosMedPage from "./pages/TurnosMedPage";
-
-import TurnosAdmin from "./pages/TurnosAdmin";
-
+import Error404Page from "./pages/Error404Page";
 
 const App = () => {
   return (
     <>
-    <Router>
-      <Routes>
-        
-      <Route path="/" element={<HomePage/>}/>
-      <Route path="/sobreNosotros" element={<SobreNosotros />} />
-      <Route path="/contact" element={<ContactPage/>}/>
-      <Route path="/registerPacient" element={<RegisterPacient/>}/>
-      <Route path="/loginPacient" element={<LoginPacientPage/>}/>
-      <Route path="/pacient" element={<PacientPage/>}/>
-      <Route path="/registerDoctor" element={<RegisterDoctorPage/>}/>
-      <Route path="/loginDoctor" element={<LoginDoctorPage/>}/>
-      <Route path="/registerAdmin" element={<RegisterAdminPage/>}/>
-      <Route path="/loginAdmin" element={<LoginAdminPage/>}/>
-      <Route path="/admin" element={<AdminPage/>}/>
-      <Route path="/adminPacient" element={<AdminPacientPage/>}/>
-      <Route path="/adminDoctor" element={<AdminDoctorPage/>}/>
-      <Route path="/listaDeTurnos" element={<ListaDeTurnos/>}/>
-      <Route path="/doctor" element={<DoctorPage/>}/>
-      <Route path="/listaDePacientes" element={<ListaDePacientes/>}/>
-      <Route path="/admin/createEditAdmin" element={<CreateEditAdminPage/>}/>
-      <Route path="/admin/createEditPacient" element={<AdminCreateEditPacientPage/>}/>
-      <Route path="/admin/createEditDoctor" element={<AdminCreateEditDoctorPage/>}/>
-      <Route path="/TerminosCondicionesPage"element={<TerminosCondicionesPage />} />
-      <Route path="/solicitarTurno" element={<Turnos/>} />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/sobreNosotros" element={<SobreNosotros />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/registerPacient" element={<RegisterPacient />} />
+          <Route path="/loginPacient" element={<LoginPacientPage />} />
+          <Route path="/pacient" element={<PacientPage />} />
+          <Route path="/registerDoctor" element={<RegisterDoctorPage />} />
+          <Route path="/loginDoctor" element={<LoginDoctorPage />} />
+          <Route path="/registerAdmin" element={<RegisterAdminPage />} />
+          <Route path="/loginAdmin" element={<LoginAdminPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/adminPacient" element={<AdminPacientPage />} />
+          <Route path="/adminDoctor" element={<AdminDoctorPage />} />
+          <Route path="/listaDeTurnos" element={<ListaDeTurnos />} />
+          <Route path="/doctor" element={<DoctorPage />} />
+          <Route path="/listaDePacientes" element={<ListaDePacientes />} />
+          <Route
+            path="/admin/createEditAdmin"
+            element={<CreateEditAdminPage />}
+          />
+          <Route
+            path="/admin/createEditPacient"
+            element={<AdminCreateEditPacientPage />}
+          />
+          <Route
+            path="/admin/createEditDoctor"
+            element={<AdminCreateEditDoctorPage />}
+          />
+          <Route
+            path="/TerminosCondicionesPage"
+            element={<TerminosCondicionesPage />}
+          />
+          <Route path="/solicitarTurno" element={<Turnos/>} />
       <Route path="/ayuda" element={<AyudaPacient/>}/>
       <Route path="/turnosMed" element={<TurnosMedPage/>}/>
       <Route path="/TurnosAdmin" element={<TurnosAdmin/>}/>
-      </Routes>
-      <FooterC/>
-    </Router>
-      
+          <Route path="*" element={<Error404Page />} />
+        </Routes>
+        <FooterC />
+      </Router>
     </>
   );
 };

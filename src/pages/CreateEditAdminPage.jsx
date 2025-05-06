@@ -7,9 +7,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CreateEditAdminPage = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const id = new URLSearchParams(location.search).get("id");
+  const navigate = useNavigate()
+  const location = useLocation()
+  const id = new URLSearchParams(location.search).get("id")
 
   const [formCreateAdmin, setFormCreateAdmin] = useState({
     nombreApellido: "",
@@ -17,11 +17,11 @@ const CreateEditAdminPage = () => {
   });
 
   const obtenerAdminPorId = () => {
-    const adminsLs = JSON.parse(localStorage.getItem("admins")) || [];
-    const admin = adminsLs.find((admin) => admin.id === Number(id));
+    const adminsLs = JSON.parse(localStorage.getItem("admins")) || []
+    const admin = adminsLs.find((admin) => admin.id === Number(id))
 
     if (admin) {
-      setFormCreateAdmin(admin);
+      setFormCreateAdmin(admin)
     }
   };
 
@@ -35,7 +35,7 @@ const CreateEditAdminPage = () => {
   const handleClickFormCreateAdmin = (ev) => {
     ev.preventDefault();
 
-    const adminsLs = JSON.parse(localStorage.getItem("admins")) || [];
+    const adminsLs = JSON.parse(localStorage.getItem("admins")) || []
 
     const emailExiste = adminsLs.some(
       (admin) => admin.email === formCreateAdmin.email
@@ -57,7 +57,7 @@ const CreateEditAdminPage = () => {
       };
 
       adminsLs.push(nuevoAdmin);
-      localStorage.setItem("admins", JSON.stringify(adminsLs));
+      localStorage.setItem("admins", JSON.stringify(adminsLs))
 
       Swal.fire({
         title: "Admin creado exitosamente!",
@@ -78,12 +78,12 @@ const CreateEditAdminPage = () => {
 
   const handleClickFormEditAdmin = (ev) => {
     ev.preventDefault();
-    const adminsLs = JSON.parse(localStorage.getItem("admins")) || [];
+    const adminsLs = JSON.parse(localStorage.getItem("admins")) || []
     const adminIndex = adminsLs.findIndex(
       (admin) => admin.id === Number(id)
     );
 
-    if (adminIndex === -1) return;
+    if (adminIndex === -1) return
 
     const emailExiste = adminsLs.some(
       (admin) =>
@@ -104,7 +104,7 @@ const CreateEditAdminPage = () => {
         ...formCreateAdmin,
         id: Number(id),
       };
-      localStorage.setItem("admins", JSON.stringify(adminsLs));
+      localStorage.setItem("admins", JSON.stringify(adminsLs))
 
       Swal.fire({
         title: "Admin editado exitosamente!",
@@ -118,16 +118,16 @@ const CreateEditAdminPage = () => {
       });
 
       setTimeout(() => {
-        navigate("/admin");
+        navigate("/admin")
       }, 500);
     }
   };
 
   useEffect(() => {
     if (id) {
-      obtenerAdminPorId();
+      obtenerAdminPorId()
     }
-  }, [id]);
+  }, [id])
 
   return (
     <>

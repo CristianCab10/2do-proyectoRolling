@@ -29,7 +29,7 @@ const NavbarPacient = () => {
         <Container>
           <Navbar.Brand href="./pacient">
             <img
-              src="./images/IsologoCreciendoColor.png"
+              src="../images/IsologoCreciendoColor.png"
               alt="Logo"
               style={{
                 width: "300px",
