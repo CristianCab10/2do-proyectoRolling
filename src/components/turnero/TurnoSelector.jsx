@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2';
 import { generarTurnosDia, guardarTurnoLocal } from '../utils/turnosUtils';
 
 const TurnoSelector = () => {
@@ -24,21 +25,49 @@ const TurnoSelector = () => {
 
   const reservar = hora => {
     if (!doctorSeleccionado || !paciente) {
-      alert("Selecciona un doctor y asegúrate de estar logueado como paciente.");
+      Swal.fire('Atención', 'Selecciona un doctor y asegúrate de estar logueado como paciente.', 'warning');
       return;
     }
 
-    const nuevoTurno = {
-      id: Date.now(),
-      fecha,
-      hora,
-      paciente: paciente.nombreApellido,
-      medico: doctorSeleccionado,
-      estado: 'pendiente'
-    };
+    const existentes = JSON.parse(localStorage.getItem('turnos')) || [];
+    const yaReservado = existentes.some(t =>
+      t.fecha === fecha &&
+      t.hora === hora &&
+      t.medico === doctorSeleccionado &&
+      t.estado !== 'Cancelado'
+    );
 
-    guardarTurnoLocal(nuevoTurno);
-    alert('Turno reservado');
+    if (yaReservado) {
+      Swal.fire('Error', 'Ese turno ya está reservado.', 'error');
+      return;
+    }
+
+    Swal.fire({
+      title: '¿Confirmar reserva?',
+      text: `Vas a reservar el turno de las ${hora} con el Dr. ${doctorSeleccionado}`,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, reservar',
+      cancelButtonText: 'Cancelar',
+    }).then(result => {
+      if (result.isConfirmed) {
+        const nuevoTurno = {
+          id: Date.now(),
+          fecha,
+          hora,
+          paciente: paciente.nombreApellido,
+          medico: doctorSeleccionado,
+          estado: 'Pendiente'
+        };
+
+        guardarTurnoLocal(nuevoTurno);
+
+        Swal.fire('Reservado', 'Tu turno fue reservado con éxito.', 'success')
+          .then(() => {
+            window.location.reload(); // 🔄 Recarga la página
+          });
+      }
+    });
   };
 
   if (!paciente || paciente.rol !== 'paciente') return null;
@@ -47,7 +76,7 @@ const TurnoSelector = () => {
     <div className="my-4">
       <h2 className="font-semibold mb-2">Seleccionar Turno</h2>
 
-      <label className="block mb-1">Selecciona un doctor:  </label>
+      <label className="block mb-1">Selecciona un doctor:</label>
       <select
         value={doctorSeleccionado}
         onChange={e => setDoctorSeleccionado(e.target.value)}
@@ -62,7 +91,12 @@ const TurnoSelector = () => {
       </select>
 
       <label className="block mb-1">Selecciona una fecha:</label>
-      <input type="date" className="border p-1 mb-2" value={fecha} onChange={manejarFecha} />
+      <input
+        type="date"
+        className="border p-1 mb-2"
+        value={fecha}
+        onChange={manejarFecha}
+      />
 
       <div className="grid grid-cols-3 gap-2 mt-2">
         {turnos.map(hora => (

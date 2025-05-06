@@ -22,6 +22,10 @@ import SobreNosotros from "./pages/SobreNosotrosPage";
 import ContactPage from "./pages/ContactPage";
 import TerminosCondicionesPage from "./pages/TerminosCondicionesPage";
 import Error404Page from "./pages/Error404Page";
+import Turnos from "./pages/Turnos";
+import AyudaPacient from "./pages/ayudaPacient";
+import TurnosMedPage from "./pages/TurnosMedPage";
+import TurnosAdmin from "./pages/TurnosAdmin";
 
 const App = () => {
   return (

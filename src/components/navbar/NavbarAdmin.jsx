@@ -40,7 +40,8 @@ const NavbarAdmin = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-            <NavLink className={"nav-link"} to={"/"}>Administradores</NavLink>
+            
+            <NavLink className={"nav-link"} to={"/TurnosAdmin"}>Ver Turnos</NavLink>
               <NavLink className={"nav-link"} to={"/admin"}>Administradores</NavLink>
               <NavLink className={"nav-link"} to={"/adminPacient"}>Pacientes</NavLink>
               <NavLink className={"nav-link"} to={"/adminDoctor"}>Doctores</NavLink>
