@@ -19,7 +19,7 @@ import AdminCreateEditPacientPage from "./pages/AdminCreateEditPacientPage";
 import AdminCreateEditDoctorPage from "./pages/AdminCreateEditDoctorPage";
 import SobreNosotros from "./pages/SobreNosotrosPage";
 import ContactPage from "./pages/ContactPage";
-
+import TerminosCondicionesPage from "./pages/TerminosCondicionesPage";
 
 const App = () => {
   return (
@@ -51,8 +51,12 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/sobreNosotros" element={<SobreNosotros />} />
+          <Route
+            path="/TerminosCondicionesPage"
+            element={<TerminosCondicionesPage />}
+          />
           <Route path="/registerPacient" element={<RegisterPacient />} />
           <Route path="/loginPacient" element={<LoginPacientPage />} />
           <Route path="/pacient" element={<PacientPage />} />
