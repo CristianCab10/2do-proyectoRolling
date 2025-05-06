@@ -48,12 +48,12 @@ const FooterC = () => {
   };
 
   return (
-    <footer className="container-fluid bg-dark text-white py-4  mt-4">
+    <footer className="container-fluid bg-dark text-white py-4  mt-4 fot">
       <div className="container">
         <div className="row d-flex flex-wrap justify-content-between">
           {/* Logo */}
           <div className="col-12 col-md-2 mb-4 mb-md-0 d-flex align-items-center justify-content-center justify-content-md-start">
-            <a href="./index.html">
+            <a href="#">
               <img
                 src="./images/logoBlancoFooter.png"
                 alt="Logo"

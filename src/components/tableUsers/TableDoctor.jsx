@@ -60,8 +60,8 @@ const TableDoctor = ({ obtenerTodosLosDoctores }) => {
               <td>{doctor.nombreApellido}</td>
               <td>{doctor.email}</td>
               <td>
-                <Link to={`/admin/createEditDoctor?${doctor.id}`} className='btn btn-warning mx-3'>Editar</Link>
-                <button className='btn btn-danger' onClick={() => handleClickDeleteDoctor(doctor.id)}>Eliminar</button>
+                <Link to={`/admin/createEditDoctor?${doctor.id}`} className='btn btn-warning mx-3 w-25'>Editar</Link>
+                <button className='btn btn-danger w-25' onClick={() => handleClickDeleteDoctor(doctor.id)}>Eliminar</button>
               </td>
             </tr>
           ))

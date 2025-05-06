@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from "./pages/HomePage";
 import FooterC from "./components/footer/FooterC";
 import RegisterPacient from "./pages/RegisterPacient";
@@ -20,12 +21,20 @@ import AdminCreateEditDoctorPage from "./pages/AdminCreateEditDoctorPage";
 import SobreNosotros from "./pages/SobreNosotrosPage";
 import ContactPage from "./pages/ContactPage";
 import TerminosCondicionesPage from "./pages/TerminosCondicionesPage";
+import Turnos from "./pages/Turnos";
+import AyudaPacient from "./pages/ayudaPacient";
+
+import TurnosMedPage from "./pages/TurnosMedPage";
+
+import TurnosAdmin from "./pages/TurnosAdmin";
+
 
 const App = () => {
   return (
     <>
     <Router>
       <Routes>
+        
       <Route path="/" element={<HomePage/>}/>
       <Route path="/sobreNosotros" element={<SobreNosotros />} />
       <Route path="/contact" element={<ContactPage/>}/>
@@ -45,10 +54,11 @@ const App = () => {
       <Route path="/admin/createEditAdmin" element={<CreateEditAdminPage/>}/>
       <Route path="/admin/createEditPacient" element={<AdminCreateEditPacientPage/>}/>
       <Route path="/admin/createEditDoctor" element={<AdminCreateEditDoctorPage/>}/>
-      <Route
-            path="/TerminosCondicionesPage"
-            element={<TerminosCondicionesPage />}
-          />
+      <Route path="/TerminosCondicionesPage"element={<TerminosCondicionesPage />} />
+      <Route path="/solicitarTurno" element={<Turnos/>} />
+      <Route path="/ayuda" element={<AyudaPacient/>}/>
+      <Route path="/turnosMed" element={<TurnosMedPage/>}/>
+      <Route path="/TurnosAdmin" element={<TurnosAdmin/>}/>
       </Routes>
       <FooterC/>
     </Router>

@@ -27,7 +27,7 @@ const NavbarPacient = () => {
     <>
     <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="./index.html">
+          <Navbar.Brand href="./pacient">
             <img
               src="./images/IsologoCreciendoColor.png"
               alt="Logo"
@@ -41,8 +41,8 @@ const NavbarPacient = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <NavLink className={"nav-link"} to={"/pacient"}>Solicitar un Turno</NavLink>
-              <NavLink className={"nav-link"} to={"/listaDeTurnos"}>LIsta de Turnos</NavLink>
+              <NavLink className={"nav-link"} to={"/solicitarTurno"}>Turnos</NavLink>
+              <NavLink className={"nav-link"} to={"/ayuda"}>Necesito Ayuda</NavLink>
             </Nav>
             <Nav className="ms-auto">
             <NavLink className={"nav-link"} to={"/"} onClick={logoutPaciente}>Cerrar Sesion</NavLink>
