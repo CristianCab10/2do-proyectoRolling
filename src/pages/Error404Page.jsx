@@ -1,7 +1,13 @@
+import Error404 from "../components/Error404/Error404";
+import NavbarC from "../components/navbar/NavbarC";
 
-
-const Error404 = () => {
-  return <div>Error404</div>;
+const Error404Page = () => {
+  return (
+    <>
+      <NavbarC />
+      <Error404 />
+    </>
+  );
 };
 
-export default Error404;
+export default Error404Page;

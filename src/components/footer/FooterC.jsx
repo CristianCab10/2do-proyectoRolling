@@ -97,7 +97,7 @@ const FooterC = () => {
             <ul className="list-unstyled">
               <li>
                 <a
-                  href="#privacidad"
+                  href="/Error404Page"
                   className="text-white text-decoration-none"
                 >
                   Política de Privacidad
