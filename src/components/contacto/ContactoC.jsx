@@ -38,6 +38,8 @@ const ContactoC = () => {
   };
 
   return (
+    
+    
     <div
       className="contacto-container"
       style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}

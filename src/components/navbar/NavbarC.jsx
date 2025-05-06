@@ -47,10 +47,10 @@ const NavbarC = () => {
               </NavDropdown>
               <NavDropdown title="Registrarse" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to="/registerPacient">
-                  Paciente
+                  Usuario
                 </NavDropdown.Item>
                 <NavDropdown.Item as={NavLink} to="/registerDoctor">
-                  Doctor
+                  Prestador
                 </NavDropdown.Item>
                 <NavDropdown.Item as={NavLink} to="/registerAdmin">
                   Admin

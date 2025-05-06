@@ -5,7 +5,7 @@ import NavbarC from "../components/navbar/NavbarC"
 const LoginAdminPage = () => {
   return (
     <>
-    <NavbarC/>
+     <NavbarC/>
     <LoginAdmin/>
     </>
   )
