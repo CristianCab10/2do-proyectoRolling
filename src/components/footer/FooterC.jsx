@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
-
 function mostrarAlertaPrestadores() {
   Swal.fire({
     title: "Bienvenido!",
@@ -106,7 +104,10 @@ const FooterC = () => {
                 </a>
               </li>
               <li>
-                <a href="#terminos" className="text-white text-decoration-none">
+                <a
+                  href="/TerminosCondicionesPage"
+                  className="text-white text-decoration-none"
+                >
                   Términos y Condiciones
                 </a>
               </li>

@@ -77,7 +77,7 @@ button:hover {
   background-color: #fece06;
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
   .contacto-container {
     flex-direction: column;
