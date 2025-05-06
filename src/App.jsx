@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
 import FooterC from "./components/footer/FooterC";
 import RegisterPacient from "./pages/RegisterPacient";
 import RegisterDoctorPage from "./pages/RegisterDoctorPage";
@@ -15,16 +14,19 @@ import PacientPage from "./pages/PacientPage";
 import ListaDeTurnos from "./pages/ListaDeTurnos";
 import DoctorPage from "./pages/DoctorPage";
 import ListaDePacientes from "./pages/ListaDePacientes";
+import ContactoC from "./components/contacto/ContactoC";
+
+
 
 const App = () => {
 
   return (
     <>
     <Router>
+    
       <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/aboutus" element={<aboutUsPage/>}/>
-      <Route path="/contact" element={<ContactPage/>}/>
       <Route path="/registerPacient" element={<RegisterPacient/>}/>
       <Route path="/loginPacient" element={<LoginPacientPage/>}/>
       <Route path="/pacient" element={<PacientPage/>}/>
@@ -38,6 +40,7 @@ const App = () => {
       <Route path="/listaDeTurnos" element={<ListaDeTurnos/>}/>
       <Route path="/doctor" element={<DoctorPage/>}/>
       <Route path="/listaDePacientes" element={<ListaDePacientes/>}/>
+      <Route path="/contact" element={<ContactoC/>}/>
       </Routes>
       <FooterC/>
     </Router>

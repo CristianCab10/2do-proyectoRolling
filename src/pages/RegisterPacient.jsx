@@ -2,6 +2,7 @@ import { Container } from 'react-bootstrap'
 import FormPacient from '../components/registerUsers/FormPacient'
 import NavbarC from '../components/navbar/NavbarC'
 
+
 const RegisterPacient = () => {
   return (
     <>
