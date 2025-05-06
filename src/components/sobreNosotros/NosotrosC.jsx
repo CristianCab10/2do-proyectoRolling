@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./NosotrosC.css";
 
 const NosotrosC = () => (
+  
   <Container className="py-5">
     <div className="jumbotron jumbotron-fluid bg-light rounded p-4 shadow-sm">
       <div className="container">
