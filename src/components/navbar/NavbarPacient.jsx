@@ -1,10 +1,29 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink} from "react-router-dom";
+import { NavLink, useNavigate} from "react-router-dom";
 
 const NavbarPacient = () => {
+  const navigate = useNavigate()
+
+  const usuariosLog = JSON.parse(sessionStorage.getItem("paciente"))
+  const logoutPaciente = (ev) => {
+    ev.preventDefault()
+    const usuariosLs = JSON.parse(localStorage.getItem("pacientes"))
+    const usuario = usuariosLs.find((user) => user.id === usuariosLog.id)
+    usuario.login = false
+
+    localStorage.setItem("pacientes" , JSON.stringify(usuariosLs))
+
+    sessionStorage.removeItem("paciente")
+
+    setTimeout(() => {
+      navigate("/")
+      
+    }, 500);
+  }
   return (
+    
     <>
     <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
@@ -26,7 +45,7 @@ const NavbarPacient = () => {
               <NavLink className={"nav-link"} to={"/listaDeTurnos"}>LIsta de Turnos</NavLink>
             </Nav>
             <Nav className="ms-auto">
-            <NavLink className={"nav-link"} to={"/"}>Cerrar Sesion</NavLink>
+            <NavLink className={"nav-link"} to={"/"} onClick={logoutPaciente}>Cerrar Sesion</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

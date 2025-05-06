@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import NavbarC from '../navbar/NavbarC';
 
 const LoginDoctor = () => {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ const LoginDoctor = () => {
     if (email && contrasenia) {
       const doctores = JSON.parse(localStorage.getItem("doctores")) || [];
       const doctor = doctores.find(d => d.email === email && d.contrasenia === contrasenia);
+      sessionStorage.setItem("doctor", JSON.stringify(doctor))
 
       if (doctor) {
         doctor.login = true;
@@ -56,8 +58,10 @@ const LoginDoctor = () => {
       }
     }
   };
+  
 
   return (
+    
     <Container className='d-flex justify-content-center my-5'>
       <Form className='w-25'>
         <Form.Group className="mb-3" controlId="doctorEmail">
@@ -97,6 +101,7 @@ const LoginDoctor = () => {
         </div>
       </Form>
     </Container>
+    
   );
 };
 export default LoginDoctor;

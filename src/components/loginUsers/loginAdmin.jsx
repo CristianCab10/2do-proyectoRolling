@@ -31,6 +31,7 @@ const LoginAdmin = () => {
     if (email && contrasenia) {
       const admins = JSON.parse(localStorage.getItem("admins")) || [];
       const admin = admins.find(a => a.email === email && a.contrasenia === contrasenia);
+      sessionStorage.setItem("usuario", JSON.stringify(admin))
 
       if (admin) {
         admin.login = true;
@@ -58,7 +59,10 @@ const LoginAdmin = () => {
   };
 
   return (
+    
+    
     <Container className='d-flex justify-content-center my-5'>
+      
       <Form className='w-25'>
         <Form.Group className="mb-3" controlId="adminEmail">
           <Form.Label>Email</Form.Label>

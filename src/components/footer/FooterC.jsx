@@ -1,13 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-function mostrarAlertaTurnos() {
-  Swal.fire({
-    title: "Para solicitar turnos debes estar registrado!",
-    icon: "warning",
-    confirmButtonText: "ok",
-  });
-}
+
 
 function mostrarAlertaPrestadores() {
   Swal.fire({
@@ -29,6 +24,19 @@ function mostrarAlertaMensajeEnviado() {
 }
 
 const FooterC = () => {
+  const navigate = useNavigate();
+
+  const mostrarAlertaTurnos = () => {
+    Swal.fire({
+      title: "¡Para solicitar turnos debes estar registrado!",
+      icon: "warning",
+      confirmButtonText: "OK",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/registerPacient");
+      }
+    });
+  };
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");
 
@@ -62,7 +70,7 @@ const FooterC = () => {
             <ul className="list-unstyled">
               <li>
                 <a
-                  href="#quienes-somos"
+                  href="/NosotrosC"
                   className="text-white text-decoration-none"
                 >
                   ¿Quiénes somos?

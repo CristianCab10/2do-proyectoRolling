@@ -17,7 +17,7 @@ const NavbarC = () => {
                 width: "300px",
                 height: "auto",
                 marginInlineStart: "0px",
-              }}  
+              }}
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,32 +26,36 @@ const NavbarC = () => {
               <NavLink className={"nav-link"} to={"/"}>
                 Inicio
               </NavLink>
-              <NavLink className={"nav-link"} to={"/aboutUs"}>
+              <NavLink className={"nav-link"} to={"/sobreNosotros"}>
                 Sobre nosotros
               </NavLink>
               <NavLink className={"nav-link"} to={"/contact"}>
                 Contacto
               </NavLink>
-
             </Nav>
             <Nav className="ms-auto">
-            <NavDropdown title="Iniciar Sesion" id="basic-nav-dropdown">
-                <NavDropdown.Item as={NavLink} to="/loginPacient">Paciente</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/loginDoctor">Doctor</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/loginAdmin">Admin</NavDropdown.Item>
+              <NavDropdown title="Iniciar Sesion" id="basic-nav-dropdown">
+                <NavDropdown.Item as={NavLink} to="/loginPacient">
+                  Paciente
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/loginDoctor">
+                  Doctor
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/loginAdmin">
+                  Admin
+                </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Registrarse" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to="/registerPacient">
-                  Paciente
+                  Usuario
                 </NavDropdown.Item>
                 <NavDropdown.Item as={NavLink} to="/registerDoctor">
-                  Doctor
+                  Prestador
                 </NavDropdown.Item>
                 <NavDropdown.Item as={NavLink} to="/registerAdmin">
                   Admin
                 </NavDropdown.Item>
               </NavDropdown>
-
             </Nav>
           </Navbar.Collapse>
         </Container>

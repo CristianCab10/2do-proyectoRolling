@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "./ContactoC.css";
+import NavbarC from "../navbar/NavbarC";
 
 const ContactoC = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,9 @@ const ContactoC = () => {
   };
 
   return (
+
+    <>
+    
     <div
       className="contacto-container"
       style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}
@@ -122,7 +126,9 @@ const ContactoC = () => {
         <p className="textos-contacto">Tel: +54 381 1234567</p>
       </div>
     </div>
+    </>
   );
 };
+
 
 export default ContactoC;

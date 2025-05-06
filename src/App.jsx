@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
 import FooterC from "./components/footer/FooterC";
 import RegisterPacient from "./pages/RegisterPacient";
 import RegisterDoctorPage from "./pages/RegisterDoctorPage";
@@ -18,9 +17,11 @@ import ListaDePacientes from "./pages/ListaDePacientes";
 import CreateEditAdminPage from "./pages/CreateEditAdminPage";
 import AdminCreateEditPacientPage from "./pages/AdminCreateEditPacientPage";
 import AdminCreateEditDoctorPage from "./pages/AdminCreateEditDoctorPage";
+import SobreNosotros from "./pages/SobreNosotrosPage";
+import ContactPage from "./pages/ContactPage";
+
 
 const App = () => {
-
   return (
     <>
     <Router>
@@ -47,6 +48,27 @@ const App = () => {
       </Routes>
       <FooterC/>
     </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/sobreNosotros" element={<SobreNosotros />} />
+          <Route path="/registerPacient" element={<RegisterPacient />} />
+          <Route path="/loginPacient" element={<LoginPacientPage />} />
+          <Route path="/pacient" element={<PacientPage />} />
+          <Route path="/registerDoctor" element={<RegisterDoctorPage />} />
+          <Route path="/loginDoctor" element={<LoginDoctorPage />} />
+          <Route path="/registerAdmin" element={<RegisterAdminPage />} />
+          <Route path="/loginAdmin" element={<LoginAdminPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/adminPacient" element={<AdminPacientPage />} />
+          <Route path="/adminDoctor" element={<AdminDoctorPage />} />
+          <Route path="/listaDeTurnos" element={<ListaDeTurnos />} />
+          <Route path="/doctor" element={<DoctorPage />} />
+          <Route path="/listaDePacientes" element={<ListaDePacientes />} />
+        </Routes>
+        <FooterC />
+      </Router>
     </>
   );
 };
