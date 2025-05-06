@@ -1,7 +1,14 @@
 import React from "react";
+import NavbarC from "../components/navbar/NavbarC";
+import NosotrosC from "../components/sobreNosotros/NosotrosC";
 
 const SobreNosotros = () => {
-  return <H2>sobre nosotros</H2>;
+  return (
+    <>
+      <NavbarC />
+      <NosotrosC />
+    </>
+  );
 };
 
 export default SobreNosotros;
