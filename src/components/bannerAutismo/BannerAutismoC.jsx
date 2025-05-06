@@ -1,5 +1,5 @@
 import React from "react";
-import "./BannerAutismo.css"; 
+import "./BannerAutismo.css";
 
 const BannerAutismoC = () => {
   return (
@@ -25,7 +25,7 @@ const BannerAutismoC = () => {
 
       <h5 className="p-2 m-5 text-white bg-danger">
         "El diagnóstico temprano y la intervención temprana son cruciales para
-        el desarrollo de la persona".
+        el desarrollo del niño"
       </h5>
     </div>
   );
