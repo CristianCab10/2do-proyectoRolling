@@ -26,7 +26,7 @@ const NavbarC = () => {
               <NavLink className={"nav-link"} to={"/"}>
                 Inicio
               </NavLink>
-              <NavLink className={"nav-link"} to={"/NosotrosC"}>
+              <NavLink className={"nav-link"} to={"/sobreNosotros"}>
                 Sobre nosotros
               </NavLink>
               <NavLink className={"nav-link"} to={"/contact"}>

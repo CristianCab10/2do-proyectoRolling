@@ -14,7 +14,9 @@ import PacientPage from "./pages/PacientPage";
 import ListaDeTurnos from "./pages/ListaDeTurnos";
 import DoctorPage from "./pages/DoctorPage";
 import ListaDePacientes from "./pages/ListaDePacientes";
-import SobreNosotrosPage from "./pages/SobreNosotrosPage";
+import SobreNosotros from "./pages/SobreNosotrosPage";
+import ContactPage from "./pages/ContactPage";
+
 
 const App = () => {
   return (
@@ -22,9 +24,8 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/aboutus" element={<aboutUsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/NosotrosC" element={<SobreNosotrosPage />} />
+          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/sobreNosotros" element={<SobreNosotros />} />
           <Route path="/registerPacient" element={<RegisterPacient />} />
           <Route path="/loginPacient" element={<LoginPacientPage />} />
           <Route path="/pacient" element={<PacientPage />} />
