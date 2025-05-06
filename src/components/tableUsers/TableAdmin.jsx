@@ -56,8 +56,8 @@ const TableAdmin = ({obtenerTodosLosAdmins}) => {
               <td>{admin.nombreApellido}</td>
               <td>{admin.email}</td>
               <td>
-                <Link to={`createEditAdmin?${admin.id}`} className='btn btn-warning mx-3'>Editar</Link>
-                <Link className='btn btn-danger' onClick={() => handleClickDeleteAdmin(admin.id)}>Eliminar</Link>
+                <Link to={`createEditAdmin?${admin.id}`} className='btn btn-warning mx-3 w-25' >Editar</Link>
+                <Link className='btn btn-danger w-25' onClick={() => handleClickDeleteAdmin(admin.id)}>Eliminar</Link>
               </td>
             </tr>
           ))

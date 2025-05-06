@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from "./pages/HomePage";
 import FooterC from "./components/footer/FooterC";
 import RegisterPacient from "./pages/RegisterPacient";
@@ -21,6 +22,10 @@ import SobreNosotros from "./pages/SobreNosotrosPage";
 import ContactPage from "./pages/ContactPage";
 import TerminosCondicionesPage from "./pages/TerminosCondicionesPage";
 import Error404Page from "./pages/Error404Page";
+import Turnos from "./pages/Turnos";
+import AyudaPacient from "./pages/ayudaPacient";
+import TurnosMedPage from "./pages/TurnosMedPage";
+import TurnosAdmin from "./pages/TurnosAdmin";
 
 const App = () => {
   return (
@@ -59,6 +64,10 @@ const App = () => {
             path="/TerminosCondicionesPage"
             element={<TerminosCondicionesPage />}
           />
+          <Route path="/solicitarTurno" element={<Turnos/>} />
+      <Route path="/ayuda" element={<AyudaPacient/>}/>
+      <Route path="/turnosMed" element={<TurnosMedPage/>}/>
+      <Route path="/TurnosAdmin" element={<TurnosAdmin/>}/>
           <Route path="*" element={<Error404Page />} />
         </Routes>
         <FooterC />

@@ -26,7 +26,7 @@ const NavbarDoctor = () => {
     <>
     <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="./index.html">
+          <Navbar.Brand href="./doctor">
             <img
               src="../images/IsologoCreciendoColor.png"
               alt="Logo"
@@ -40,7 +40,7 @@ const NavbarDoctor = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <NavLink className={"nav-link"} to={"/doctor"}>Turnos</NavLink>
+              <NavLink className={"nav-link"} to={"/turnosMed"}>Turnos</NavLink>
               <NavLink className={"nav-link"} to={"/listaDePacientes"}>LIsta de Pacientes</NavLink>
             </Nav>
             <Nav className="ms-auto">
