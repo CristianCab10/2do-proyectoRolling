@@ -5,6 +5,7 @@ import NosotrosC from "../components/sobreNosotros/NosotrosC";
 const SobreNosotros = () => {
   return (
     <>
+    <NavbarC/>
       <NosotrosC />
     </>
   );

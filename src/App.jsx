@@ -27,7 +27,7 @@ const App = () => {
     <Router>
       <Routes>
       <Route path="/" element={<HomePage/>}/>
-      <Route path="/aboutus" element={<aboutUsPage/>}/>
+      <Route path="/sobreNosotros" element={<SobreNosotros />} />
       <Route path="/contact" element={<ContactPage/>}/>
       <Route path="/registerPacient" element={<RegisterPacient/>}/>
       <Route path="/loginPacient" element={<LoginPacientPage/>}/>
@@ -45,34 +45,14 @@ const App = () => {
       <Route path="/admin/createEditAdmin" element={<CreateEditAdminPage/>}/>
       <Route path="/admin/createEditPacient" element={<AdminCreateEditPacientPage/>}/>
       <Route path="/admin/createEditDoctor" element={<AdminCreateEditDoctorPage/>}/>
-      </Routes>
-      <FooterC/>
-    </Router>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/sobreNosotros" element={<SobreNosotros />} />
-          <Route
+      <Route
             path="/TerminosCondicionesPage"
             element={<TerminosCondicionesPage />}
           />
-          <Route path="/registerPacient" element={<RegisterPacient />} />
-          <Route path="/loginPacient" element={<LoginPacientPage />} />
-          <Route path="/pacient" element={<PacientPage />} />
-          <Route path="/registerDoctor" element={<RegisterDoctorPage />} />
-          <Route path="/loginDoctor" element={<LoginDoctorPage />} />
-          <Route path="/registerAdmin" element={<RegisterAdminPage />} />
-          <Route path="/loginAdmin" element={<LoginAdminPage />} />
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/adminPacient" element={<AdminPacientPage />} />
-          <Route path="/adminDoctor" element={<AdminDoctorPage />} />
-          <Route path="/listaDeTurnos" element={<ListaDeTurnos />} />
-          <Route path="/doctor" element={<DoctorPage />} />
-          <Route path="/listaDePacientes" element={<ListaDePacientes />} />
-        </Routes>
-        <FooterC />
-      </Router>
+      </Routes>
+      <FooterC/>
+    </Router>
+      
     </>
   );
 };
