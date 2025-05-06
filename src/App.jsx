@@ -15,6 +15,9 @@ import PacientPage from "./pages/PacientPage";
 import ListaDeTurnos from "./pages/ListaDeTurnos";
 import DoctorPage from "./pages/DoctorPage";
 import ListaDePacientes from "./pages/ListaDePacientes";
+import CreateEditAdminPage from "./pages/CreateEditAdminPage";
+import AdminCreateEditPacientPage from "./pages/AdminCreateEditPacientPage";
+import AdminCreateEditDoctorPage from "./pages/AdminCreateEditDoctorPage";
 
 const App = () => {
 
@@ -38,6 +41,9 @@ const App = () => {
       <Route path="/listaDeTurnos" element={<ListaDeTurnos/>}/>
       <Route path="/doctor" element={<DoctorPage/>}/>
       <Route path="/listaDePacientes" element={<ListaDePacientes/>}/>
+      <Route path="/admin/createEditAdmin" element={<CreateEditAdminPage/>}/>
+      <Route path="/admin/createEditPacient" element={<AdminCreateEditPacientPage/>}/>
+      <Route path="/admin/createEditDoctor" element={<AdminCreateEditDoctorPage/>}/>
       </Routes>
       <FooterC/>
     </Router>

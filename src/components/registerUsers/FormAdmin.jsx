@@ -55,7 +55,14 @@ const FormAdmin = () => {
       terminosCondiciones
     ) {
       if (contrasenia === repContrasenia) {
-        const adminsLs = JSON.parse(localStorage.getItem("admins")) || []
+        let adminsLs = []
+        //asegurarse de que adminsLs sea un array
+        try {
+          const data = JSON.parse(localStorage.getItem("admins"))
+          if (Array.isArray(data)) {
+            adminsLs = data}}
+            catch (error) {
+              console.error("Error al leer admins del localStorage:", error)}
 
         const emailExiste = adminsLs.some(admin => admin.email === email)
         if (emailExiste) {
